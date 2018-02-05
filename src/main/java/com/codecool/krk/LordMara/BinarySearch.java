@@ -1,5 +1,6 @@
 package com.codecool.krk.LordMara;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,5 +40,18 @@ public class BinarySearch {
             }
         }
         return false;
+    }
+
+    public static void main( String[] args ) {
+        BinarySearch custom = new BinarySearch();
+
+        int[] intArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        List<Integer> integers = new ArrayList<>(Arrays.asList(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+
+        System.out.println("Recursive method:");
+        System.out.println(custom.doRecursiveBinarySearch(intArray, 4));
+
+        System.out.println("Not recursive method:");
+        System.out.println(custom.doNotRecursiveBinarySearch(integers, 4));
     }
 }
